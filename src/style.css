@@ -2,7 +2,13 @@ body {
   margin: 0;
 }
 
-* {
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,6 +26,8 @@ body {
   padding: 0 50px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .nav__list {
@@ -27,6 +35,12 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.nav__item {
+  display: flex;
+  height: 60px;
+  align-items: center;
 }
 
 .nav__link {
@@ -39,19 +53,13 @@ body {
   font-family: Roboto, Arial, sans-serif;
   white-space: nowrap;
   text-transform: uppercase;
-  font-weight: 500px;
+  font-weight: 500;
   line-height: 100%;
   font-size: 12px;
   transition: color 0.3s;
 }
 
-nav ul li {
-  display: flex;
-  align-items: center;
-  height: 60px; /* pega do design */
-}
-
-.nav__item {
+.nav__item:not(:first-child) {
   margin-left: 20px;
 }
 
@@ -73,10 +81,6 @@ nav ul li {
 .nav {
   flex-wrap: nowrap;
   white-space: nowrap;
-}
-
-.data-qa:hover {
-  color: #000;
 }
 
 .nav a.is-active {
